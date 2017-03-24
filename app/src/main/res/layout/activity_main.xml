@@ -10,12 +10,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
 
@@ -24,17 +27,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:max="250"
-                android:progress="128"
+                android:max="256"
+                android:progress="@string/red_value"
                 android:progressDrawable="@drawable/custom_progress_red"
                 android:scrollbarSize="25sp" />
 
-            <TextView
+            <EditText
                 android:id="@+id/tvRed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="128"
+                android:text="@string/red_value"
                 android:textColor="#f00"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -44,24 +47,24 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <SeekBar
                 android:id="@+id/sbGreen"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top"
                 android:layout_weight="1"
-                android:max="250"
-                android:progress="128"
+                android:max="256"
+                android:progress="@string/green_value"
                 android:progressDrawable="@drawable/custom_progress_green" />
 
-            <TextView
+            <EditText
                 android:id="@+id/tvGreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="128"
+                android:text="@string/green_value"
                 android:textColor="#0f0"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -73,6 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <SeekBar
@@ -80,16 +84,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:max="250"
-                android:progress="128"
+                android:max="256"
+                android:progress="@string/blue_value"
                 android:progressDrawable="@drawable/custom_progress_blue" />
 
-            <TextView
+            <EditText
                 android:id="@+id/tvBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="128"
+                android:text="@string/blue_value"
                 android:textColor="#00f"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -101,7 +105,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:background="#808080"
             android:gravity="center"
             android:text="#FF808080"
@@ -109,7 +113,7 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -121,7 +125,7 @@
         <Button
             android:layout_width="130dp"
             android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
+            android:gravity="center"
             android:layout_weight="3"
             android:background="@mipmap/dino_test"
             android:padding="25sp" />
@@ -130,7 +134,7 @@
             android:id="@+id/tvBlank1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
 
             android:background="#fff"
             android:gravity="center"
