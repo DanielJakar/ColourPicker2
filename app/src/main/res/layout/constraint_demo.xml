@@ -8,61 +8,96 @@
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="0dp"
-        app:layout_constraintHorizontal_weight="4"
+    <android.support.constraint.Guideline
+        android:id="@+id/Center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintRight_toLeftOf="@+id/btn2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="206dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/Center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.31"
+        tools:layout_editor_absoluteY="186dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Center_vertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_thumb_up_black_24dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginEnd="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="119dp"
+        android:layout_height="88dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@drawable/medical_red_thermometer_1"
         android:layout_marginLeft="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="133dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/toolbar"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/toolbar" />
 
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="0dp"
-        app:layout_constraintHorizontal_weight="1"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/btn2"
-        app:layout_constraintTop_toTopOf="@+id/btn1"
-        android:layout_marginTop="0dp" />
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="0dp"
-        app:layout_constraintHorizontal_weight="2"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintRight_toLeftOf="@+id/btn3"
-        app:layout_constraintLeft_toRightOf="@+id/btn1"
-        app:layout_constraintTop_toTopOf="@+id/btn1"
-        android:layout_marginTop="1dp" />
-
-    <Button
-        android:id="@+id/button7"
+    <TextView
+        android:id="@+id/tvCelsius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="237dp"
+        android:layout_marginRight="0dp"
+        android:ems="10"
+        android:text="Celsius"
+        android:textColor="#fff"
+        android:textAlignment="center"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintVertical_bias="0.659"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/Center" />
 
-    <Button
-        android:id="@+id/button8"
+    <TextView
+        android:id="@+id/tvFaheren"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:text="Fahernheight"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/Center_vertical"
+        app:layout_constraintLeft_toLeftOf="@+id/toolbar"
+        app:layout_constraintRight_toLeftOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/button7"
-        app:layout_constraintVertical_bias="0.499"
-        android:layout_marginLeft="70dp" />
-
+        app:layout_constraintVertical_bias="0.458" />
 </android.support.constraint.ConstraintLayout>
